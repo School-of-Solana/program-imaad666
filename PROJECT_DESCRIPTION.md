@@ -1,13 +1,13 @@
 # Project Description
 
-**Deployed Frontend URL:** [Deploy using instructions in frontend/DEPLOYMENT.md]
+**Deployed Frontend URL:** [Will update after deploying to Vercel]
 
 **Solana Program ID:** `13AyfsUmh9iow5qF83SV5hv9imBdAFFgvSbjdBQUceuk`
 
 ## Project Overview
 
 ### Description
-A fully decentralized task management application built on Solana. Users can create, update, toggle completion status, and delete tasks directly on the blockchain. Each user has their own isolated task list managed through Program Derived Addresses (PDAs), ensuring data ownership and security. The application demonstrates core Solana program development concepts including account management, PDAs, and state mutations.
+A decentralized task manager built on Solana. I wanted to build something practical that I'd actually use - a to-do list where all your tasks live on-chain. Each user gets their own task list using PDAs, so your data is yours and only you can modify it. You can create tasks with priorities, mark them complete, update them, or delete them. Everything happens through Solana transactions.
 
 ### Key Features
 - **User Account Initialization**: Create a personal account to manage your tasks
@@ -220,64 +220,37 @@ All 22 tests pass successfully, demonstrating:
 - **Status**: ✅ Successfully deployed
 
 ### Frontend Deployment
-- **Platform**: Vercel (recommended)
-- **Instructions**: See `frontend/DEPLOYMENT.md`
-- **Build Command**: `npm run build`
-- **Framework**: Next.js (auto-detected by Vercel)
+Just push to GitHub and deploy on Vercel - it'll auto-detect Next.js and work out of the box.
 
 ## Additional Notes for Evaluators
 
-### Development Journey
-This project represents a complete full-stack Solana dApp implementation. Key learning points:
+### What I Learned
 
-1. **PDA Architecture**: Understanding how to structure PDAs for efficient account lookup and security
-2. **Account Constraints**: Using Anchor's constraint system (`has_one`, `seeds`, `bump`, `close`)
-3. **Error Handling**: Implementing custom errors and proper validation
-4. **Testing Strategy**: Writing comprehensive tests that cover both success and failure cases
-5. **Frontend Integration**: Connecting a modern web app to Solana programs with proper type safety
+This was my first proper Solana dApp! The hardest parts were:
+- Understanding PDAs and how to derive them correctly
+- Getting the account constraints right in Anchor
+- Figuring out how to handle errors properly
+- Connecting the frontend to the program (the types were confusing at first)
 
-### Design Decisions
+### Why I Built This
 
-**Why Task Manager?**
-- Practical use case that everyone understands
-- Demonstrates CRUD operations on-chain
-- Shows state management across multiple accounts
-- Illustrates the cost-benefit of blockchain storage
+I wanted to make something useful that I might actually use. A task manager seemed simple enough to finish in time but complex enough to learn from. Plus everyone knows how to-do lists work so it's easy to understand.
 
-**Why PDAs?**
-- No need for users to manage multiple keypairs
-- Deterministic addresses enable easy account lookup
-- Secure by design (only program can sign for PDA)
+### Things That Could Be Better
 
-**Why Anchor?**
-- Type safety and better developer experience
-- Built-in security checks and constraints
-- Automatic IDL generation for frontend integration
-- Cleaner, more maintainable code
+If I had more time I'd add:
+- Due dates for tasks
+- Categories or tags
+- A way to share tasks with others
+- Better performance for users with lots of tasks (right now it loads all tasks)
+- Search/filter functionality
 
-### Potential Improvements
-If this were a production app, I would add:
-- Task categories/tags
-- Due dates and reminders
-- Sharing/collaboration features
-- Task history and audit log
-- Pagination for users with many tasks
-- Bulk operations (delete multiple tasks)
-- Search functionality
-- Export tasks to CSV/JSON
+### Security
 
-### Security Considerations
-- All instructions verify ownership using `has_one` constraints
-- Input validation on title and description lengths
-- PDA derivation prevents account collision
-- Proper error handling prevents undefined behavior
-- Tests verify unauthorized access is blocked
-
-### Performance Notes
-- Task lookup is O(n) where n is task_count
-- For production, consider using a more efficient indexing strategy
-- Current implementation prioritizes simplicity and learning
-- Rent is reclaimed when tasks are deleted
+Made sure to:
+- Check ownership on all operations (using `has_one` constraints)
+- Validate input lengths so people can't spam huge strings
+- Test that users can't mess with each other's tasks
 
 ## Repository Structure
 
@@ -302,15 +275,19 @@ program-imaad666/
 └── PROJECT_DESCRIPTION.md     # This file
 ```
 
-## Conclusion
+## Running It Yourself
 
-This Task Manager dApp demonstrates a complete understanding of Solana program development, from smart contract implementation to frontend integration. It showcases:
+### Test the program
+```bash
+cd anchor_project/task_manager
+anchor test
+```
 
-- ✅ Anchor program with PDAs
-- ✅ Comprehensive testing (22 tests, all passing)
-- ✅ Deployed to Devnet
-- ✅ Modern, responsive frontend
-- ✅ Wallet integration
-- ✅ Complete documentation
+### Run frontend locally
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-The project is production-ready for Devnet and serves as a solid foundation for more complex Solana applications.
+Then connect your wallet (make sure it's on devnet!) and you can create tasks, mark them complete, delete them, etc.

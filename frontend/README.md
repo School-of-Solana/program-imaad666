@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Task Manager Frontend
 
-## Getting Started
+The web interface for the Task Manager dApp. Built with Next.js and connects to the Solana program on devnet.
 
-First, run the development server:
+## Running Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Make sure you have:
+- A Solana wallet extension (Phantom or Solflare)
+- Your wallet set to **Devnet**
+- Some devnet SOL (get it from faucet or `solana airdrop 2`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to Use
 
-## Learn More
+1. Connect your wallet
+2. Initialize your account (first time only)
+3. Create tasks with titles, descriptions, and priorities
+4. Check off tasks when complete
+5. Delete tasks you don't need anymore
 
-To learn more about Next.js, take a look at the following resources:
+## Deploying
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Easiest way is to use Vercel:
+1. Push code to GitHub
+2. Import project in Vercel
+3. Set root directory to `frontend`
+4. Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The app is configured to use devnet by default.
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16
+- Solana Wallet Adapter
+- Anchor (for interacting with the program)
+- Tailwind CSS
