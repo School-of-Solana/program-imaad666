@@ -1,0 +1,524 @@
+{
+  "address": "13AyfsUmh9iow5qF83SV5hv9imBdAFFgvSbjdBQUceuk",
+  "metadata": {
+    "name": "task_manager",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "create_task",
+      "discriminator": [
+        194,
+        80,
+        6,
+        180,
+        232,
+        127,
+        48,
+        171
+      ],
+      "accounts": [
+        {
+          "name": "task",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  97,
+                  115,
+                  107
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              },
+              {
+                "kind": "account",
+                "path": "user_account.task_count",
+                "account": "UserAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "owner",
+          "relations": [
+            "user_account"
+          ]
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "priority",
+          "type": {
+            "defined": {
+              "name": "Priority"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "delete_task",
+      "discriminator": [
+        112,
+        220,
+        10,
+        109,
+        3,
+        168,
+        46,
+        73
+      ],
+      "accounts": [
+        {
+          "name": "task",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  97,
+                  115,
+                  107
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              },
+              {
+                "kind": "arg",
+                "path": "task_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "owner",
+          "relations": [
+            "task",
+            "user_account"
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "_task_id",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initialize_user",
+      "discriminator": [
+        111,
+        17,
+        185,
+        250,
+        60,
+        122,
+        38,
+        254
+      ],
+      "accounts": [
+        {
+          "name": "user_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "toggle_task",
+      "discriminator": [
+        158,
+        165,
+        239,
+        211,
+        112,
+        243,
+        95,
+        183
+      ],
+      "accounts": [
+        {
+          "name": "task",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  97,
+                  115,
+                  107
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              },
+              {
+                "kind": "arg",
+                "path": "task_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "owner",
+          "relations": [
+            "task",
+            "user_account"
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "_task_id",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "update_task",
+      "discriminator": [
+        100,
+        51,
+        124,
+        168,
+        211,
+        208,
+        42,
+        228
+      ],
+      "accounts": [
+        {
+          "name": "task",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  97,
+                  115,
+                  107
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              },
+              {
+                "kind": "arg",
+                "path": "task_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "owner",
+          "relations": [
+            "task"
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "_task_id",
+          "type": "u64"
+        },
+        {
+          "name": "title",
+          "type": {
+            "option": "string"
+          }
+        },
+        {
+          "name": "description",
+          "type": {
+            "option": "string"
+          }
+        },
+        {
+          "name": "priority",
+          "type": {
+            "option": {
+              "defined": {
+                "name": "Priority"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Task",
+      "discriminator": [
+        79,
+        34,
+        229,
+        55,
+        88,
+        90,
+        55,
+        84
+      ]
+    },
+    {
+      "name": "UserAccount",
+      "discriminator": [
+        211,
+        33,
+        136,
+        16,
+        186,
+        110,
+        242,
+        127
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Unauthorized",
+      "msg": "You are not authorized to perform this action"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidTitle",
+      "msg": "Title must be between 1 and 100 characters"
+    },
+    {
+      "code": 6002,
+      "name": "InvalidDescription",
+      "msg": "Description must be 500 characters or less"
+    }
+  ],
+  "types": [
+    {
+      "name": "Priority",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Low"
+          },
+          {
+            "name": "Medium"
+          },
+          {
+            "name": "High"
+          },
+          {
+            "name": "Urgent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Task",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "priority",
+            "type": {
+              "defined": {
+                "name": "Priority"
+              }
+            }
+          },
+          {
+            "name": "completed",
+            "type": "bool"
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "task_id",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UserAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "task_count",
+            "type": "u64"
+          },
+          {
+            "name": "completed_count",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}
