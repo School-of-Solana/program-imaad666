@@ -15,7 +15,7 @@ task_manager = "13AyfsUmh9iow5qF83SV5hv9imBdAFFgvSbjdBQUceuk"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "devnet"
+cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
