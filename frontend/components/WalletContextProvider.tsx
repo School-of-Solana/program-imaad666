@@ -15,6 +15,7 @@ export const WalletContextProvider: FC<{ children: ReactNode }> = ({ children })
       new PhantomWalletAdapter(),
       new SolflareWalletAdapter(),
     ],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   );
 
