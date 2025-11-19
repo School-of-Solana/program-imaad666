@@ -28,7 +28,7 @@ export function useClaimFoundListingMutation() {
   const { client, account, cluster } = useSolana()
   const queryClient = useQueryClient()
   const signer = useWalletUiSigner({ 
-    account: account ?? { address: '' as never, label: '' } as UiWalletAccount 
+    account: (account ?? { address: '' as never, label: '' } as unknown) as UiWalletAccount 
   })
 
   return useMutation({
