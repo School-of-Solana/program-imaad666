@@ -1,0 +1,17 @@
+{
+  "name": "findare-anchor",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@codama/nodes-from-anchor": "^1.2.10",
+    "@codama/renderers-js": "^1.4.3",
+    "gill": "0.11.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

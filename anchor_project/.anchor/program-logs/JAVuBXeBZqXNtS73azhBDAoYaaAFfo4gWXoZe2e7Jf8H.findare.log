@@ -1,0 +1,127 @@
+Streaming transaction logs mentioning JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H. Confirmed commitment
+Transaction executed in slot 5:
+  Signature: 4iLp6eSg3hUJ8aa1NfzSATyQK9qVKEj92f3UQVKeAL5FvmwUBw8reAjLmAoykTUMq1MijVVARTPzbfqC6oddKFa1
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: InitializeApp
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 8670 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 6:
+  Signature: 25GjkdEgFuACB5o1DbMCQUjPVgSLJt7JFjC3AEQdyTGKhDK2ecJYMLspdPaQaUswM1D5iiGws69c9nr3VGyVNgfi
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: CreateLostPost
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 12615 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 7:
+  Signature: 3W6WZ6AXvVx4QJwGL8CuLp4sZkNk7tiLAWdjdbjZZoGnw6wSAzcSkggrr2RmhJ6pgKravKw5QEzsMK45NewwzULY
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: SubmitFoundReport
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 13108 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 8:
+  Signature: 5Aec9T5LCfdJ496jvXgKboFG7U55ngHuHx8tQdtTunDT4JxMyWEJKSw5MF4wSxL7ofjxaGcQaa28kkGXHH89CMxm
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: RejectFoundReport
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 9106 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 9:
+  Signature: 2ysFcmVfgbgSZ4uH3Qg3iBHdYXCt1wezyd7MjsJrRjhnsTqcakSHqfDqXPnPnHLRPtoHewABssA9TqHc8PqYSU72
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: SubmitFoundReport
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 13174 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 10:
+  Signature: 5SiWo8LX4d8ikY8hLCtEPtgyjLE3M4qRGKxKLoBWBM6phJWbguB2oXmLT8AdLTpEiYTVqqjd1RtJGse6PuEZnbhF
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: ApproveFoundReport
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 9289 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 11:
+  Signature: AYtcNQ7aV9fR5pGPmrzjXHURMugWxq6YgBEYANGVpfv4HuefptTPNaKKJBzbgcRwfhfpEiaLvtSeNEBYXqMiYPE
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: CloseLostPost
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 2935 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 12:
+  Signature: EHHkqdEP5UvMdgwkapjJtBCFqoNrBnXnEhE9ScCnvizFjZkYtVjW8uDyYbGZZEofyCnQekVUWDsnMaQ1MLPr6GA
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: CreateFoundListing
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 10533 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 13:
+  Signature: 5KCqD39P8uW1yrfUKwS8UGAYEXnzuGzTAwqcRMgkXHgtY5xturwgWbtEhb9FvgrSD5CyitDBRjXFVm8Gd4z8Dgyg
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: ClaimFoundListing
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 15367 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 14:
+  Signature: SFmPwqDVqUgKoFFXJrqXrJmnXfFVRrLGCyEknKnz7dLikeiecekY6guf6uzB7rdJoYyuCYMtn5nYR1AkaXUWBNd
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: ApproveClaim
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 9117 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 15:
+  Signature: 3cduE4PUZ9KxgKJ3R7N8yBUEm57cMhnEmc3jB3zbdN4b1VkUcVQxjXaaciX2Njo2MTHv4qtrJ8bXQR3d5s42HDeA
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: CreateFoundListing
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 19518 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 16:
+  Signature: 4peXyao14PWCkZmEij7fjmjpAKXBTteBorkfqM98L2ihRWSCwfeHyAkdQgByaXm49k4U5h5Y8818Ae5QsnXVcfsa
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: ClaimFoundListing
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 18149 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+Transaction executed in slot 17:
+  Signature: 67v5jfrZeVGVrYWixipndxTRmpTcMM2EyfL3VzvfYpkSjm5YF21RJ6EKt1mt1Sp4TMUSNGzuxCUiEkWQKQGjTVb
+  Status: Ok
+  Log Messages:
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+    Program log: Instruction: RejectClaim
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 9047 of 200000 compute units
+    Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success

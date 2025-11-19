@@ -1,0 +1,1245 @@
+{
+  "address": "JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H",
+  "metadata": {
+    "name": "findare",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "approve_claim",
+      "discriminator": [
+        74,
+        228,
+        211,
+        63,
+        140,
+        255,
+        69,
+        210
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "relations": [
+            "found_post"
+          ]
+        },
+        {
+          "name": "found_post",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  111,
+                  117,
+                  110,
+                  100,
+                  45,
+                  112,
+                  111,
+                  115,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "found_post.finder",
+                "account": "FoundPost"
+              },
+              {
+                "kind": "account",
+                "path": "found_post.post_id",
+                "account": "FoundPost"
+              }
+            ]
+          }
+        },
+        {
+          "name": "claim_ticket",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  108,
+                  97,
+                  105,
+                  109,
+                  45,
+                  116,
+                  105,
+                  99,
+                  107,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "found_post"
+              },
+              {
+                "kind": "account",
+                "path": "claim_ticket.claimer",
+                "account": "ClaimTicket"
+              }
+            ]
+          }
+        },
+        {
+          "name": "finder",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "approve_found_report",
+      "discriminator": [
+        125,
+        30,
+        145,
+        67,
+        188,
+        85,
+        146,
+        93
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "relations": [
+            "lost_post"
+          ]
+        },
+        {
+          "name": "lost_post",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  111,
+                  115,
+                  116,
+                  45,
+                  112,
+                  111,
+                  115,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "lost_post.owner",
+                "account": "LostPost"
+              },
+              {
+                "kind": "account",
+                "path": "lost_post.post_id",
+                "account": "LostPost"
+              }
+            ]
+          }
+        },
+        {
+          "name": "found_report",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  111,
+                  117,
+                  110,
+                  100,
+                  45,
+                  114,
+                  101,
+                  112,
+                  111,
+                  114,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "lost_post"
+              },
+              {
+                "kind": "account",
+                "path": "found_report.finder",
+                "account": "FoundReport"
+              }
+            ]
+          }
+        },
+        {
+          "name": "finder",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "claim_found_listing",
+      "discriminator": [
+        244,
+        92,
+        103,
+        22,
+        203,
+        232,
+        185,
+        90
+      ],
+      "accounts": [
+        {
+          "name": "claimer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "found_post",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  111,
+                  117,
+                  110,
+                  100,
+                  45,
+                  112,
+                  111,
+                  115,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "found_post.finder",
+                "account": "FoundPost"
+              },
+              {
+                "kind": "account",
+                "path": "found_post.post_id",
+                "account": "FoundPost"
+              }
+            ]
+          }
+        },
+        {
+          "name": "config",
+          "relations": [
+            "found_post"
+          ]
+        },
+        {
+          "name": "claim_ticket",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  108,
+                  97,
+                  105,
+                  109,
+                  45,
+                  116,
+                  105,
+                  99,
+                  107,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "found_post"
+              },
+              {
+                "kind": "account",
+                "path": "claimer"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "claim_notes",
+          "type": "string"
+        },
+        {
+          "name": "claim_deposit",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "close_lost_post",
+      "discriminator": [
+        43,
+        200,
+        112,
+        80,
+        242,
+        142,
+        25,
+        9
+      ],
+      "accounts": [
+        {
+          "name": "lost_post",
+          "writable": true
+        },
+        {
+          "name": "poster",
+          "writable": true,
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "create_found_listing",
+      "discriminator": [
+        64,
+        56,
+        172,
+        124,
+        253,
+        31,
+        73,
+        79
+      ],
+      "accounts": [
+        {
+          "name": "finder",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config"
+        },
+        {
+          "name": "found_post",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  111,
+                  117,
+                  110,
+                  100,
+                  45,
+                  112,
+                  111,
+                  115,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "finder"
+              },
+              {
+                "kind": "arg",
+                "path": "post_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "post_id",
+          "type": "u64"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "attributes",
+          "type": "string"
+        },
+        {
+          "name": "photo_ref",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "create_lost_post",
+      "discriminator": [
+        87,
+        38,
+        95,
+        116,
+        43,
+        130,
+        252,
+        179
+      ],
+      "accounts": [
+        {
+          "name": "poster",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config"
+        },
+        {
+          "name": "lost_post",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  111,
+                  115,
+                  116,
+                  45,
+                  112,
+                  111,
+                  115,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "poster"
+              },
+              {
+                "kind": "arg",
+                "path": "post_id"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "post_id",
+          "type": "u64"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "attributes",
+          "type": "string"
+        },
+        {
+          "name": "photo_ref",
+          "type": "string"
+        },
+        {
+          "name": "reward_lamports",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initialize_app",
+      "discriminator": [
+        75,
+        120,
+        190,
+        52,
+        218,
+        180,
+        222,
+        75
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "admin",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "reject_claim",
+      "discriminator": [
+        238,
+        185,
+        227,
+        8,
+        51,
+        188,
+        35,
+        182
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "relations": [
+            "found_post"
+          ]
+        },
+        {
+          "name": "found_post",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  111,
+                  117,
+                  110,
+                  100,
+                  45,
+                  112,
+                  111,
+                  115,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "found_post.finder",
+                "account": "FoundPost"
+              },
+              {
+                "kind": "account",
+                "path": "found_post.post_id",
+                "account": "FoundPost"
+              }
+            ]
+          }
+        },
+        {
+          "name": "claim_ticket",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  108,
+                  97,
+                  105,
+                  109,
+                  45,
+                  116,
+                  105,
+                  99,
+                  107,
+                  101,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "found_post"
+              },
+              {
+                "kind": "account",
+                "path": "claim_ticket.claimer",
+                "account": "ClaimTicket"
+              }
+            ]
+          }
+        },
+        {
+          "name": "claimer",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "reject_found_report",
+      "discriminator": [
+        103,
+        106,
+        137,
+        244,
+        253,
+        192,
+        115,
+        247
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "relations": [
+            "lost_post"
+          ]
+        },
+        {
+          "name": "lost_post",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  111,
+                  115,
+                  116,
+                  45,
+                  112,
+                  111,
+                  115,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "lost_post.owner",
+                "account": "LostPost"
+              },
+              {
+                "kind": "account",
+                "path": "lost_post.post_id",
+                "account": "LostPost"
+              }
+            ]
+          }
+        },
+        {
+          "name": "found_report",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  111,
+                  117,
+                  110,
+                  100,
+                  45,
+                  114,
+                  101,
+                  112,
+                  111,
+                  114,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "lost_post"
+              },
+              {
+                "kind": "account",
+                "path": "found_report.finder",
+                "account": "FoundReport"
+              }
+            ]
+          }
+        },
+        {
+          "name": "finder",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "submit_found_report",
+      "discriminator": [
+        35,
+        120,
+        228,
+        120,
+        148,
+        120,
+        221,
+        169
+      ],
+      "accounts": [
+        {
+          "name": "finder",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "lost_post",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  111,
+                  115,
+                  116,
+                  45,
+                  112,
+                  111,
+                  115,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "lost_post.owner",
+                "account": "LostPost"
+              },
+              {
+                "kind": "account",
+                "path": "lost_post.post_id",
+                "account": "LostPost"
+              }
+            ]
+          }
+        },
+        {
+          "name": "config",
+          "relations": [
+            "lost_post"
+          ]
+        },
+        {
+          "name": "found_report",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  102,
+                  111,
+                  117,
+                  110,
+                  100,
+                  45,
+                  114,
+                  101,
+                  112,
+                  111,
+                  114,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "lost_post"
+              },
+              {
+                "kind": "account",
+                "path": "finder"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "evidence_uri",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "AppConfig",
+      "discriminator": [
+        35,
+        142,
+        177,
+        102,
+        131,
+        31,
+        162,
+        52
+      ]
+    },
+    {
+      "name": "ClaimTicket",
+      "discriminator": [
+        239,
+        28,
+        188,
+        14,
+        190,
+        134,
+        159,
+        174
+      ]
+    },
+    {
+      "name": "FoundPost",
+      "discriminator": [
+        7,
+        24,
+        252,
+        152,
+        224,
+        6,
+        110,
+        202
+      ]
+    },
+    {
+      "name": "FoundReport",
+      "discriminator": [
+        64,
+        132,
+        164,
+        87,
+        153,
+        22,
+        183,
+        238
+      ]
+    },
+    {
+      "name": "LostPost",
+      "discriminator": [
+        240,
+        253,
+        237,
+        169,
+        128,
+        35,
+        79,
+        225
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "RewardTooSmall",
+      "msg": "Reward too small"
+    },
+    {
+      "code": 6001,
+      "name": "ClaimDepositTooSmall",
+      "msg": "Claim deposit too small"
+    },
+    {
+      "code": 6002,
+      "name": "LostPostNotOpen",
+      "msg": "Lost post not open for this action"
+    },
+    {
+      "code": 6003,
+      "name": "Unauthorized",
+      "msg": "You are not authorized to perform this action"
+    },
+    {
+      "code": 6004,
+      "name": "ReportAlreadyProcessed",
+      "msg": "Report already processed"
+    },
+    {
+      "code": 6005,
+      "name": "ClaimAlreadyProcessed",
+      "msg": "Claim already processed"
+    },
+    {
+      "code": 6006,
+      "name": "ClaimNotAllowed",
+      "msg": "Claim not allowed in current state"
+    },
+    {
+      "code": 6007,
+      "name": "EmptyField",
+      "msg": "Input field is empty"
+    },
+    {
+      "code": 6008,
+      "name": "FieldTooLong",
+      "msg": "Input field exceeds allowed length"
+    },
+    {
+      "code": 6009,
+      "name": "OutstandingReward",
+      "msg": "Outstanding reward remains in escrow"
+    },
+    {
+      "code": 6010,
+      "name": "InsufficientEscrow",
+      "msg": "Insufficient lamports in escrow account"
+    }
+  ],
+  "types": [
+    {
+      "name": "AppConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "lost_post_count",
+            "type": "u64"
+          },
+          {
+            "name": "found_post_count",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ClaimStatus",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Open"
+          },
+          {
+            "name": "AwaitingAdminReview"
+          },
+          {
+            "name": "Closed"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ClaimTicket",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "found_post",
+            "type": "pubkey"
+          },
+          {
+            "name": "claimer",
+            "type": "pubkey"
+          },
+          {
+            "name": "notes",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "type": {
+              "defined": {
+                "name": "VerificationStatus"
+              }
+            }
+          },
+          {
+            "name": "deposit_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FoundPost",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "finder",
+            "type": "pubkey"
+          },
+          {
+            "name": "post_id",
+            "type": "u64"
+          },
+          {
+            "name": "status",
+            "type": {
+              "defined": {
+                "name": "ClaimStatus"
+              }
+            }
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "updated_at",
+            "type": "i64"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "attributes",
+            "type": "string"
+          },
+          {
+            "name": "photo_ref",
+            "type": "string"
+          },
+          {
+            "name": "active_claim",
+            "type": "pubkey"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FoundReport",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "lost_post",
+            "type": "pubkey"
+          },
+          {
+            "name": "finder",
+            "type": "pubkey"
+          },
+          {
+            "name": "evidence_uri",
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "type": {
+              "defined": {
+                "name": "VerificationStatus"
+              }
+            }
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LostPost",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config",
+            "type": "pubkey"
+          },
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "finder",
+            "type": "pubkey"
+          },
+          {
+            "name": "post_id",
+            "type": "u64"
+          },
+          {
+            "name": "reward_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "status",
+            "type": {
+              "defined": {
+                "name": "PostStatus"
+              }
+            }
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "updated_at",
+            "type": "i64"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "attributes",
+            "type": "string"
+          },
+          {
+            "name": "photo_ref",
+            "type": "string"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PostStatus",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Open"
+          },
+          {
+            "name": "AwaitingAdminReview"
+          },
+          {
+            "name": "AwaitingPickup"
+          },
+          {
+            "name": "Closed"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VerificationStatus",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Submitted"
+          },
+          {
+            "name": "Approved"
+          },
+          {
+            "name": "Rejected"
+          }
+        ]
+      }
+    }
+  ]
+}

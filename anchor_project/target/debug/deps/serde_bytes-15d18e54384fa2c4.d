@@ -1,0 +1,10 @@
+/Users/imaad/i/school of solana/task 5/program-imaad666/anchor_project/target/debug/deps/serde_bytes-15d18e54384fa2c4.d: /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/lib.rs /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/bytearray.rs /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/bytes.rs /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/de.rs /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/ser.rs /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/bytebuf.rs
+
+/Users/imaad/i/school of solana/task 5/program-imaad666/anchor_project/target/debug/deps/libserde_bytes-15d18e54384fa2c4.rmeta: /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/lib.rs /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/bytearray.rs /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/bytes.rs /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/de.rs /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/ser.rs /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/bytebuf.rs
+
+/Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/lib.rs:
+/Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/bytearray.rs:
+/Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/bytes.rs:
+/Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/de.rs:
+/Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/ser.rs:
+/Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_bytes-0.11.17/src/bytebuf.rs:

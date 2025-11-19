@@ -1,0 +1,9 @@
+/Users/imaad/i/school of solana/task 5/program-imaad666/findare/anchor/target/debug/deps/anchor_lang_idl_spec-fa3315bb145a6fb3.d: /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anchor-lang-idl-spec-0.1.0/src/lib.rs
+
+/Users/imaad/i/school of solana/task 5/program-imaad666/findare/anchor/target/debug/deps/libanchor_lang_idl_spec-fa3315bb145a6fb3.rlib: /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anchor-lang-idl-spec-0.1.0/src/lib.rs
+
+/Users/imaad/i/school of solana/task 5/program-imaad666/findare/anchor/target/debug/deps/libanchor_lang_idl_spec-fa3315bb145a6fb3.rmeta: /Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anchor-lang-idl-spec-0.1.0/src/lib.rs
+
+/Users/imaad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/anchor-lang-idl-spec-0.1.0/src/lib.rs:
+
+# env-dep:CARGO_PKG_VERSION=0.1.0

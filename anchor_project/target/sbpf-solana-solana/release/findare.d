@@ -1,0 +1,1 @@
+/Users/imaad/i/school\ of\ solana/task\ 5/program-imaad666/anchor_project/target/sbpf-solana-solana/release/findare.so: /Users/imaad/i/school\ of\ solana/task\ 5/program-imaad666/anchor_project/programs/findare/src/lib.rs
